@@ -27,13 +27,3 @@ def pascal_triangle(n):
 
     # Return the generated triangle
     return triangle
-
-# Test the function
-if __name__ == "__main__":
-    # Define a function to print the triangle
-    def print_triangle(triangle):
-        for row in triangle:
-            print("[{}]".format(",".join([str(x) for x in row])))
-
-    # Print the Pascal's triangle with 5 rows
-    print_triangle(pascal_triangle(5))
