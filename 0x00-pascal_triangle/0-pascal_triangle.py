@@ -1,0 +1,30 @@
+def pascal_triangle(n):
+    # Check if n is less than or equal to 0
+    if n <= 0:
+        # Return an empty list if n is invalid
+        return []
+
+    # Initialize the triangle with the first row
+    triangle = [[1]]
+    
+    # Generate each row of the triangle
+    for i in range(1, n):
+        # Get the previous row
+        prev_row = triangle[i - 1]
+        # Calculate the new row based on the previous row
+        new_row = [1] + [prev_row[j] + prev_row[j + 1] for j in range(len(prev_row) - 1)] + [1]
+        # Append the new row to the triangle
+        triangle.append(new_row)
+
+    # Return the generated triangle
+    return triangle
+
+# Test the function
+if __name__ == "__main__":
+    # Define a function to print the triangle
+    def print_triangle(triangle):
+        for row in triangle:
+            print("[{}]".format(",".join([str(x) for x in row])))
+
+    # Print the Pascal's triangle with 5 rows
+    print_triangle(pascal_triangle(5))
