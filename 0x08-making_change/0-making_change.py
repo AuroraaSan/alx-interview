@@ -19,11 +19,6 @@ def makeChange(coins, total):
         while coin <= total:
             total -= coin
             count += 1
-        if(total ==0):
+        if(total == 0):
             return count
     return -1
-
-
-print(makeChange([1, 2, 25], 37))
-
-print(makeChange([1256, 54, 48, 16, 102], 1453))
