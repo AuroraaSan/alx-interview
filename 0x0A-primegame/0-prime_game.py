@@ -1,10 +1,4 @@
-#!/usr/bin/python3
-"""Module for Prime Game"""
-
-
-
 def isWinner(x, nums):
-    
     # Step 1: Precompute primes using Sieve of Eratosthenes up to the maximum value in nums.
     max_n = max(nums)
     primes = sieve_of_eratosthenes(max_n)
