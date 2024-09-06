@@ -1,4 +1,24 @@
+#!/usr/bin/python3
+"""Module for Prime Game"""
+
+
 def isWinner(x, nums):
+    """
+    Determines the winner of a set of prime number removal games.
+
+    Args:
+        x (int): The number of rounds.
+        nums (list of int): A list of integers where each integer n denotes
+        a set of consecutive integers starting from 1 up to and including n.
+
+    Returns:
+        str: The name of the player who won the most rounds (either "Ben"
+        or "Maria").
+        None: If the winner cannot be determined.
+
+    Raises:
+        N
+    """
     # Step 1: Precompute primes using Sieve of Eratosthenes up to the maximum value in nums.
     max_n = max(nums)
     primes = sieve_of_eratosthenes(max_n)
